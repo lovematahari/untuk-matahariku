@@ -18,11 +18,16 @@
         button { padding: 12px 25px; background: #ff4d4d; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
         button:hover { background: #ff3333; transform: scale(1.05); }
         #konten { display: none; animation: fadeIn 2s; }
-        .heart { position: absolute; color: #ff4d4d; font-size: 20px; animation: fly 3s linear infinite; pointer-events: none; }
-        @keyframes fly {
+
+        /* CSS Efek Terbang (Hati & Bunga) */
+        .floating-icon { 
+            position: absolute; pointer-events: none; opacity: 0; animation: flyUp 3s linear infinite; 
+        }
+        @keyframes flyUp {
             0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
             100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
         }
+
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         .pesan { line-height: 1.6; font-size: 15px; text-align: justify; margin-top: 20px; }
         img { width: 100%; border-radius: 15px; margin-bottom: 15px; border: 2px solid #ff4d4d; }
@@ -66,15 +71,18 @@
         }
 
         function startHearts() {
+            // Gabungan Hati dan Bunga Matahari
             setInterval(() => {
-                const heart = document.createElement("div");
-                heart.innerHTML = "❤️";
-                heart.classList.add("heart");
-                heart.style.left = Math.random() * 100 + "vw";
-                heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
-                document.body.appendChild(heart);
-                setTimeout(() => heart.remove(), 3000);
-            }, 300);
+                const icon = document.createElement("div");
+                const listIcon = ["❤️", "💖", "🌻", "☀️"];
+                icon.innerHTML = listIcon[Math.floor(Math.random() * listIcon.length)];
+                icon.classList.add("floating-icon");
+                icon.style.left = Math.random() * 100 + "vw";
+                icon.style.fontSize = (Math.random() * 15 + 15) + "px";
+                icon.style.animationDuration = (Math.random() * 2 + 2) + "s";
+                document.body.appendChild(icon);
+                setTimeout(() => icon.remove(), 3000);
+            }, 200); // Muncul setiap 0.2 detik (lebih ramai)
         }
     </script>
 </body>
