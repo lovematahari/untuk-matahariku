@@ -6,22 +6,38 @@
     <title>For My Sun ❤️</title>
     <style>
         body { 
-            background: #0f0f0f; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            /* Perubahan: Warna background gradasi Pink Dusty & Warm Cream */
+            background: linear-gradient(135deg, #fce4ec 0%, #fff3e0 100%); 
+            color: #5d4037; /* Warna teks cokelat tua biar enak dibaca di bg terang */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; overflow-x: hidden;
         }
         .card { 
-            background: rgba(42, 42, 42, 0.8); padding: 30px; border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; z-index: 10; 
-            max-width: 400px; width: 90%; backdrop-filter: blur(10px);
+            /* Perubahan: Card jadi putih transparan (Glassmorphism) */
+            background: rgba(255, 255, 255, 0.7); 
+            padding: 30px; border-radius: 25px; 
+            box-shadow: 0 10px 30px rgba(216, 27, 96, 0.1); 
+            text-align: center; z-index: 10; 
+            max-width: 400px; width: 90%; backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
-        input { padding: 12px; border-radius: 8px; border: none; width: 80%; margin-bottom: 15px; text-align: center; font-size: 16px; background: #333; color: white; }
-        button { padding: 12px 25px; background: #ff4d4d; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        button:hover { background: #ff3333; transform: scale(1.05); }
+        input { 
+            padding: 12px; border-radius: 12px; border: 1px solid #f8bbd0; 
+            width: 80%; margin-bottom: 15px; text-align: center; font-size: 16px; 
+            background: white; color: #ad1457; 
+        }
+        button { 
+            padding: 12px 25px; background: #ec407a; /* Warna Pink Cerah */
+            color: white; border: none; border-radius: 12px; cursor: pointer; 
+            font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(236, 64, 122, 0.3);
+        }
+        button:hover { background: #d81b60; transform: scale(1.05); }
+        
         #konten { display: none; animation: fadeIn 2s; }
 
-        /* CSS Efek Terbang (Hati & Bunga) */
+        /* Efek Terbang Ikon */
         .floating-icon { 
-            position: absolute; pointer-events: none; opacity: 0; animation: flyUp 3s linear infinite; 
+            position: absolute; pointer-events: none; opacity: 0; animation: flyUp 3.5s linear infinite; 
         }
         @keyframes flyUp {
             0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
@@ -29,27 +45,28 @@
         }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .pesan { line-height: 1.6; font-size: 15px; text-align: justify; margin-top: 20px; }
-        img { width: 100%; border-radius: 15px; margin-bottom: 15px; border: 2px solid #ff4d4d; }
+        .pesan { line-height: 1.6; font-size: 15px; text-align: justify; margin-top: 20px; color: #6d4c41; }
+        img { width: 100%; border-radius: 20px; margin-bottom: 15px; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1, h2 { color: #ad1457; }
     </style>
 </head>
 <body>
 
     <div class="card" id="loginBox">
-        <h2>Hai Pacarku Yang Cantik ❤️</h2>
-        <p style="font-size: 12px; color: #aaa;">Ketik Tanggal Special (DDMM)</p>
-        <input type="text" id="password" placeholder="Contoh: 1402">
+        <h2>Hai Cantikku ❤️</h2>
+        <p style="font-size: 12px; color: #ad1457;">Ketik Tanggal Special (DDMM)</p>
+        <input type="text" id="password" placeholder="Masukin kodenya...">
         <br>
-        <button onclick="checkPass()">Klik Ya Sayang</button>
+        <button onclick="checkPass()">Buka Cintaku</button>
     </div>
 
     <div id="konten" class="card">
         <img src="foto.jpg.jpeg" alt="Matahariku">
         <h1>Dear Matahariku, ❤️</h1>
         <div class="pesan">
-            <p>Walaupun jarak sedang menguji kita, aku ingin kamu selalu merasa dekat dan bahagia. Setiap detiknya, pikiranku tak pernah berhenti memikirkanmu. Cintaku padamu itu seperti matahari selalu terbit setiap pagi dan semakin hangat setiap saat.</p>
+            <p>Walaupun jarak sedang menguji kita, aku ingin kamu selalu merasa dekat dan bahagia. Setiap detiknya, pikiranku tak pernah berhenti memikirkanmu. Cintaku padamu itu seperti matahari; selalu terbit setiap pagi dan semakin hangat setiap saat.</p>
             <p>Jaga selalu senyummu ya, jangan biarkan rasa sedih sedikit pun menghilangkan binar indah di matamu. Kamu adalah kesayanganku yang cantik, wanita yang paling kuat, dan sosok yang luar biasa hebat di mataku.</p>
-            <p>Kuatkan lagi sabarmu untuk menunggu waktu di mana kita tak perlu lagi berucap 'kangen' lewat layar. Aku sangat mencintaimu, Matahari. Hari ini, esok, dan selamanya, Anw, yuk ciuman ?.</p>
+            <p>Kuatkan lagi sabarmu untuk menunggu waktu di mana kita tak perlu lagi berucap 'kangen' lewat layar. Aku sangat mencintaimu, Matahari. Hari ini, esok, dan selamanya. Anw, yuk ciuman? 😘</p>
             <p style="text-align: center; font-weight: bold; font-size: 18px;">I love you so much.<br>I love you the most sukii sukii. ❤️</p>
         </div>
         <audio id="lagu" loop>
@@ -66,23 +83,22 @@
                 document.getElementById("lagu").play();
                 startHearts();
             } else {
-                alert("Salah sayang, masa lupa ? 🥺");
+                alert("Salah sayang, masa lupa? 🥺");
             }
         }
 
         function startHearts() {
-            // Gabungan Hati dan Bunga Matahari
             setInterval(() => {
                 const icon = document.createElement("div");
-                const listIcon = ["❤️", "💖", "🌻", "☀️"];
+                const listIcon = ["❤️", "💖", "🌻", "☀️", "🌸"];
                 icon.innerHTML = listIcon[Math.floor(Math.random() * listIcon.length)];
                 icon.classList.add("floating-icon");
                 icon.style.left = Math.random() * 100 + "vw";
                 icon.style.fontSize = (Math.random() * 15 + 15) + "px";
-                icon.style.animationDuration = (Math.random() * 2 + 2) + "s";
+                icon.style.animationDuration = (Math.random() * 2 + 2.5) + "s";
                 document.body.appendChild(icon);
-                setTimeout(() => icon.remove(), 3000);
-            }, 200); // Muncul setiap 0.2 detik (lebih ramai)
+                setTimeout(() => icon.remove(), 4000);
+            }, 250); 
         }
     </script>
 </body>
