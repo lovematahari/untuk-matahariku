@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sun ❤️</title>
+    <style>
+        body { 
+            background: #0f0f0f; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; overflow-x: hidden;
+        }
+        .card { 
+            background: rgba(42, 42, 42, 0.8); padding: 30px; border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; z-index: 10; 
+            max-width: 400px; width: 90%; backdrop-filter: blur(10px);
+        }
+        input { padding: 12px; border-radius: 8px; border: none; width: 80%; margin-bottom: 15px; text-align: center; font-size: 16px; background: #333; color: white; }
+        button { padding: 12px 25px; background: #ff4d4d; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        button:hover { background: #ff3333; transform: scale(1.05); }
+        #konten { display: none; animation: fadeIn 2s; }
+        .heart { position: absolute; color: #ff4d4d; font-size: 20px; animation: fly 3s linear infinite; pointer-events: none; }
+        @keyframes fly {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .pesan { line-height: 1.6; font-size: 15px; text-align: justify; margin-top: 20px; }
+        img { width: 100%; border-radius: 15px; margin-bottom: 15px; border: 2px solid #ff4d4d; }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="loginBox">
+        <h2>Enter Our Special Date ❤️</h2>
+        <p style="font-size: 12px; color: #aaa;">Ketik Tanggal dan Bulan Special (DDMM)</p>
+        <input type="text" id="password" placeholder="Contoh: 1402">
+        <br>
+        <button onclick="checkPass()">Buka Ya Sayang</button>
+    </div>
+
+    <div id="konten" class="card">
+        <img src="foto.jpg" alt="Matahariku">
+        <h1>Dear Matahariku, ❤️</h1>
+        <div class="pesan">
+            <p>Walaupun jarak sedang menguji kita, aku ingin kamu selalu merasa dekat dan bahagia. Setiap detiknya, pikiranku tak pernah absen memikirkanmu. Cintaku padamu itu seperti matahari; selalu terbit setiap pagi dan semakin hangat setiap saat.</p>
+            <p>Jaga selalu senyummu ya, Sayang. Jangan biarkan rasa sedih sedikit pun menghilangkan binar indah di matamu. Kamu adalah kesayanganku yang cantik, wanita yang paling kuat, dan sosok yang luar biasa hebat di mataku.</p>
+            <p>Kuatkan lagi sabarmu untuk menunggu waktu di mana kita tak perlu lagi berucap 'sampai jumpa' lewat layar. Aku sangat mencintaimu, Matahari. Hari ini, esok, dan selamanya.</p>
+            <p style="text-align: center; font-weight: bold; font-size: 18px;">I love you so much.<br>I love you the most. ❤️</p>
+        </div>
+        <audio id="lagu" loop>
+            <source src="lagu.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function checkPass() {
+            var pass = document.getElementById("password").value;
+            // Password diset 2201 (22 Januari)
+            if(pass == "2201") {
+                document.getElementById("loginBox").style.display = "none";
+                document.getElementById("konten").style.display = "block";
+                document.getElementById("lagu").play();
+                startHearts();
+            } else {
+                alert("Salah sayang, masa lupa ? 🥺");
+            }
+        }
+
+        function startHearts() {
+            setInterval(() => {
+                const heart = document.createElement("div");
+                heart.innerHTML = "❤️";
+                heart.classList.add("heart");
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+            }, 300);
+        }
+    </script>
+</body>
+</html>
