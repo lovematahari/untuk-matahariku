@@ -32,37 +32,36 @@
 
     <div class="card" id="loginBox">
         <h2>Enter Our Special Date ❤️</h2>
-        <p style="font-size: 12px; color: #aaa;">Ketik Tanggal dan Bulan Special (DDMM)</p>
+        <p style="font-size: 12px; color: #aaa;">Ketik Tanggal Jadian Kita (DDMM)</p>
         <input type="text" id="password" placeholder="Contoh: 1402">
         <br>
-        <button onclick="checkPass()">Buka Ya Sayang</button>
+        <button onclick="checkPass()">Buka Cintaku</button>
     </div>
 
     <div id="konten" class="card">
-        <img src="foto.jpg" alt="Matahariku">
+        <img src="foto.jpg.jpeg" alt="Matahariku">
         <h1>Dear Matahariku, ❤️</h1>
         <div class="pesan">
-            <p>Walaupun jarak sedang menguji kita, aku ingin kamu selalu merasa dekat dan bahagia. Setiap detiknya, pikiranku tak pernah absen memikirkanmu. Cintaku padamu itu seperti matahari; selalu terbit setiap pagi dan semakin hangat setiap saat.</p>
+            <p>Walaupun jarak sedang menguji kita, aku ingin kamu selalu merasa dekat dan bahagia. Setiap detiknya, pikiranku tak pernah berhenti memikirkanmu. Cintaku padamu itu seperti matahari selalu terbit setiap pagi dan semakin hangat setiap saat.</p>
             <p>Jaga selalu senyummu ya, Sayang. Jangan biarkan rasa sedih sedikit pun menghilangkan binar indah di matamu. Kamu adalah kesayanganku yang cantik, wanita yang paling kuat, dan sosok yang luar biasa hebat di mataku.</p>
-            <p>Kuatkan lagi sabarmu untuk menunggu waktu di mana kita tak perlu lagi berucap 'sampai jumpa' lewat layar. Aku sangat mencintaimu, Matahari. Hari ini, esok, dan selamanya.</p>
+            <p>Kuatkan lagi sabarmu untuk menunggu waktu di mana kita tak perlu lagi berucap 'kangen' lewat layar. Aku sangat mencintaimu, Matahari. Hari ini, esok, dan selamanya, Anw, yuk ciuman ?.</p>
             <p style="text-align: center; font-weight: bold; font-size: 18px;">I love you so much.<br>I love you the most. ❤️</p>
         </div>
         <audio id="lagu" loop>
-            <source src="lagu.mp3" type="audio/mpeg">
+            <source src="wave to earth - 사랑으로 (love.).mp3.mp3" type="audio/mpeg">
         </audio>
     </div>
 
     <script>
         function checkPass() {
             var pass = document.getElementById("password").value;
-            // Password diset 2201 (22 Januari)
             if(pass == "2201") {
                 document.getElementById("loginBox").style.display = "none";
                 document.getElementById("konten").style.display = "block";
                 document.getElementById("lagu").play();
                 startHearts();
             } else {
-                alert("Salah sayang, masa lupa ? 🥺");
+                alert("Salah sayang, masa lupa tanggal jadian kita? 🥺");
             }
         }
 
